@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{F78CC2A1-05C4-47FB-91AE-89DF95E5E145}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>asthanarht.calculator</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\CloudDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CalculatorViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+  </ItemGroup>
+</Project>

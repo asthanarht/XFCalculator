@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="asthanarht.calculator.MainPage" xmlns:vm="clr-namespace:asthanarht.calculator;" Title="{Binding Title}">
+	<ContentPage.BindingContext>
+		<vm:CalculatorViewModel />
+	</ContentPage.BindingContext>
+     
+
+    <Grid Padding="0,0" RowSpacing="0" ColumnSpacing="0" BackgroundColor="Black">
+
+       <Grid.RowDefinitions>
+         <RowDefinition Height="2.5*" />
+         <RowDefinition Height="40" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+       </Grid.ColumnDefinitions>
+
+        
+       <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="#ED374D" Text="{Binding DisplayValue}"
+              TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
+       <Label x:Name="displaytext" Grid.Row="1" FontSize="20" FontAttributes="Bold" BackgroundColor="#E13E51" Text="{Binding DisplayText}"
+              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
+
+        
+       <Button Text="7" Grid.Row="3" Grid.Column="0"
+               BorderWidth="0" IsEnabled="{Binding IsDigitEnable}"
+               BackgroundColor="#26263B" TextColor="#ED374D"
+               FontSize="36" BorderRadius="0" Command="{Binding DigitComamnd}" CommandParameter="7"/>
+       <Button Text="8" Grid.Row="3" Grid.Column="1" BorderWidth="0"
+               BackgroundColor="#26263B" TextColor="#ED374D" IsEnabled="{Binding IsDigitEnable}"
+               FontSize="36" BorderRadius="0" Command="{Binding DigitComamnd}" CommandParameter="8" />
+       <Button Text="9" Grid.Row="3" Grid.Column="2" BorderWidth="0"
+               BackgroundColor="#26263B" TextColor="#ED374D" IsEnabled="{Binding IsDigitEnable}"
+               FontSize="36" BorderRadius="0" Command="{Binding DigitComamnd}" CommandParameter="9" />
+
+      <Button Text="4" Grid.Row="4" Grid.Column="0"
+               BackgroundColor="#26263B" TextColor="#ED374D" IsEnabled="{Binding IsDigitEnable}"
+               FontSize="36" BorderRadius="0" Command="{Binding DigitComamnd}" CommandParameter="4" />
+       <Button Text="5" Grid.Row="4" Grid.Column="1"
+               BackgroundColor="#26263B" TextColor="#ED374D" IsEnabled="{Binding IsDigitEnable}"
+               FontSize="36" BorderRadius="0" Command="{Binding DigitComamnd}" CommandParameter="5" />
+       <Button Text="6" Grid.Row="4" Grid.Column="2" IsEnabled="{Binding IsDigitEnable}"
+               BackgroundColor="#26263B" TextColor="#ED374D"
+               FontSize="36" BorderRadius="0" Command="{Binding DigitComamnd}" CommandParameter="6" />
+
+      <Button Text="1" Grid.Row="5" Grid.Column="0" IsEnabled="{Binding IsDigitEnable}"
+               BackgroundColor="#26263B" TextColor="#ED374D"
+               FontSize="36" BorderRadius="0" Command="{Binding DigitComamnd}" CommandParameter="1" />
+       <Button Text="2" Grid.Row="5" Grid.Column="1" IsEnabled="{Binding IsDigitEnable}"
+               BackgroundColor="#26263B" TextColor="#ED374D"
+               FontSize="36" BorderRadius="0" Command="{Binding DigitComamnd}" CommandParameter="2" />
+       <Button Text="3" Grid.Row="5" Grid.Column="2" IsEnabled="{Binding IsDigitEnable}"
+               BackgroundColor="#26263B" TextColor="#ED374D"
+               FontSize="36" BorderRadius="0" Command="{Binding DigitComamnd}" CommandParameter="3" />
+        <Button Text="." Grid.Row="6" Grid.Column="0" IsEnabled="{Binding IsDigitEnable}"
+               BackgroundColor="#26263B" TextColor="#ED374D"
+               FontSize="36" BorderRadius="0" Command="{Binding DigitComamnd}" CommandParameter="." />
+       <Button Text="0" Grid.Row="6" Grid.Column="1" IsEnabled="{Binding IsDigitEnable}"
+               BackgroundColor="#26263B" TextColor="#ED374D"
+               FontSize="36" BorderRadius="0" Command="{Binding DigitComamnd}" CommandParameter="0" />
+       <Button Text="=" Grid.Row="6" Grid.Column="2" IsEnabled="{Binding IsDigitEnable}"
+               BackgroundColor="#26263B" TextColor="#ED374D"
+               FontSize="36" BorderRadius="0"  Command="{Binding ComputeCommand}"/>
+
+
+
+
+        <Button Text="C" Grid.Row="2" Grid.Column="0"
+               BackgroundColor="#26263B" TextColor="#44476B"
+               FontSize="36" BorderRadius="0" Command="{Binding ClearCommand}"/>
+       <Button Text="CE" Grid.Row="2" Grid.Column="1"
+               BackgroundColor="#26263B" TextColor="#44476B"
+               FontSize="36" BorderRadius="0" Command="{Binding ClearEntryCommand}" />
+       <Button Text="%" Grid.Row="2" Grid.Column="2"
+               BackgroundColor="#26263B" TextColor="#44476B"
+               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+
+       <Button Text="del" Grid.Row="2" Grid.Column="3" IsEnabled="{Binding IsDigitEnable}"
+                BackgroundColor="#26263B" TextColor="#44476B"
+                FontSize="36" BorderRadius="0" Command="{Binding DeleteCommand}" />  
+       <Button Text="÷" Grid.Row="3" Grid.Column="3"
+                BackgroundColor="#26263B" TextColor="White"
+                FontSize="36" BorderRadius="0" Command="{Binding OperatorCommand}" CommandParameter="/"/>
+       <Button Text="x" Grid.Row="4" Grid.Column="3"
+                BackgroundColor="#26263B" TextColor="White"
+                FontSize="36" BorderRadius="0" Command="{Binding OperatorCommand}" CommandParameter="*" />
+       <Button Text="-" Grid.Row="5" Grid.Column="3"
+                BackgroundColor="#26263B" TextColor="White"
+                FontSize="36" BorderRadius="0" Command="{Binding OperatorCommand}" CommandParameter="-" />
+       <Button Text="+" Grid.Row="6" Grid.Column="3"
+                BackgroundColor="#26263B" TextColor="White"
+                FontSize="36" BorderRadius="0" Command="{Binding OperatorCommand}" CommandParameter="+" />
+
+      <!-- <Button Text="C" Grid.Row="5" Grid.Column="0"
+                BackgroundColor="#26263B" TextColor="White"
+                FontSize="36" BorderRadius="0" Clicked="OnClear" />
+
+       <Button Text="=" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"
+                BackgroundColor="#26263B" TextColor="White"
+                FontSize="36" BorderRadius="0" Clicked="OnCalculate" />
+-->
+    </Grid>
+</ContentPage>
