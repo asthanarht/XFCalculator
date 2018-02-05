@@ -171,9 +171,11 @@ namespace asthanarht.calculator
                 if (calculation != 0)
                 {
                     _operandOne = calculation;
+                    _operandTwo = null;
                     _operation = operation;
-
-                    DisplayValue = string.Empty;
+                    _previousVal = calculation.ToString();
+                    _newDisplay = string.Empty;
+                    DisplayText= calculation.ToString()+ op ;
                 }
                 else
                 {
@@ -183,6 +185,7 @@ namespace asthanarht.calculator
             else if (_operandOne.HasValue)
             {
                 _operation = operation;
+                _operandTwo = null;
                 DisplayText = DisplayText + op;
                 _newDisplay = string.Empty;
                 DisplayValue = string.Empty;
@@ -201,7 +204,7 @@ namespace asthanarht.calculator
             if (_hasOperation)
                 return;
 
-            if (!String.IsNullOrWhiteSpace(DisplayValue))
+            if (!String.IsNullOrWhiteSpace(DisplayText))
             {
                 DisplayText = DisplayText.Remove(DisplayText.Length - 1);
             }
@@ -251,6 +254,14 @@ namespace asthanarht.calculator
             _operandOne = ConvertStringToDecimal(_previousVal);
             _hasOperation = true;
             IsDigitEnable = false;
+        }
+
+        public decimal GetPercentValue(decimal? percentage, decimal baseValue)
+        {
+            if (percentage == null)
+                return 0;
+
+            return baseValue * (percentage.Value / 100);
         }
 
         public decimal Calculate()
