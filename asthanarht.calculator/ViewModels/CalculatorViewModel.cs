@@ -173,9 +173,10 @@ namespace asthanarht.calculator
                     _operandOne = calculation;
                     _operandTwo = null;
                     _operation = operation;
-                    _previousVal = calculation.ToString();
+                    _previousVal = _operandOne.ToString();
                     _newDisplay = string.Empty;
-                    DisplayText= calculation.ToString()+ op ;
+                    DisplayValue = _previousVal;
+                        DisplayText= _operandOne.ToString()+ op ;
                 }
                 else
                 {
