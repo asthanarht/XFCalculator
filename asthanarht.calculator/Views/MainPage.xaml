@@ -79,16 +79,16 @@
         <Button Text="C" Grid.Row="2" Grid.Column="0"
                BackgroundColor="#26263B" TextColor="#44476B"
                FontSize="36" BorderRadius="0" Command="{Binding ClearCommand}"/>
-       <Button Text="CE" Grid.Row="2" Grid.Column="1"
+       <Button Text="√" Grid.Row="2" Grid.Column="1"
                BackgroundColor="#26263B" TextColor="#44476B"
-               FontSize="36" BorderRadius="0" Command="{Binding ClearEntryCommand}" />
+               FontSize="36" BorderRadius="0" Command="{Binding SquareRootCommand}" />
        <Button Text="%" Grid.Row="2" Grid.Column="2"
                BackgroundColor="#26263B" TextColor="#44476B"
-               FontSize="36" BorderRadius="0" Clicked="OnSelectNumber" />
+               FontSize="36" BorderRadius="0" Command="{Binding OperatorCommand}" CommandParameter="%" />
 
-       <Button Text="del" Grid.Row="2" Grid.Column="3" IsEnabled="{Binding IsDigitEnable}"
+       <Button Text="&#9003;" Grid.Row="2" Grid.Column="3" IsEnabled="{Binding IsDigitEnable}"
                 BackgroundColor="#26263B" TextColor="#44476B"
-                FontSize="36" BorderRadius="0" Command="{Binding DeleteCommand}" />  
+                FontSize="26" BorderRadius="0" Command="{Binding DeleteCommand}" />  
        <Button Text="÷" Grid.Row="3" Grid.Column="3"
                 BackgroundColor="#26263B" TextColor="White"
                 FontSize="36" BorderRadius="0" Command="{Binding OperatorCommand}" CommandParameter="/"/>

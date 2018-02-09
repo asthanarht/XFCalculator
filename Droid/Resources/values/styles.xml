@@ -24,6 +24,14 @@
 	<style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
 		<item name="colorAccent">#FF4081</item>
 	</style>
+
+     <style name="splashscreen" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@drawable/splash</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsTranslucent">false</item>
+    <item name="android:windowIsFloating">false</item>
+    <item name="android:backgroundDimEnabled">true</item>
+  </style>
     <style name="MyButton" parent="android:Widget.Material.Button">
   <item name="android:layout_margin">0dip</item>
   <item name="android:background">#ff0000</item>

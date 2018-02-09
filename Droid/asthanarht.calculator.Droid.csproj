@@ -138,6 +138,10 @@
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\drawable\iconc.png" />
+    <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\iconc.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\iconc.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderer\" />

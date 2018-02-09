@@ -28,6 +28,8 @@ namespace asthanarht.calculator
             ClearEntryCommand = new Command(ClearEntryCommandExecute);
             ClearCommand = new Command(ClearCommandExecute);
             ComputeCommand = new Command(ComputeCommandExecute);
+            SquareRootCommand = new Command(SquareRootCommandExecute);
+            PercentageCommand = new Command(PercentageCommandExecute);
 
             DisplayValue = string.Empty;
             DisplayText = string.Empty;
@@ -99,6 +101,22 @@ namespace asthanarht.calculator
         public ICommand ClearEntryCommand { get; private set; }
         public ICommand ClearCommand { get; private set; }
         public ICommand ComputeCommand { get; private set; }
+        public ICommand SquareRootCommand { get; private set; }
+        public ICommand PercentageCommand { get; private set; }
+
+
+        private void SquareRootCommandExecute()
+        {
+            DisplayValue = string.Empty;
+            DisplayValue = Math.Round(Math.Sqrt((double)_operandOne),4).ToString();
+            _operandOne = ConvertStringToDecimal(DisplayValue);
+            DisplayText = DisplayValue;
+        }
+
+        private void PercentageCommandExecute()
+        {
+
+        }
 
         private void DigitCommandExecute(string value)
         {
@@ -160,6 +178,9 @@ namespace asthanarht.calculator
                 case "/":
                     operation = Operator.Division;
                     break;
+                case "%":
+                    operation = Operator.Percentage;
+                    break;
                 default:
                     throw new ArgumentException("Invalid Operator!");
             }
@@ -208,6 +229,7 @@ namespace asthanarht.calculator
             if (!String.IsNullOrWhiteSpace(DisplayText))
             {
                 DisplayText = DisplayText.Remove(DisplayText.Length - 1);
+                _newDisplay = DisplayText;
             }
         }
 
@@ -281,6 +303,8 @@ namespace asthanarht.calculator
                         return RoundUpbyNumber((_operandOne.Value * _operandTwo.Value),5);
                     case Operator.Division:
                         return RoundUpbyNumber((_operandOne.Value / _operandTwo.Value),5);
+                    case Operator.Percentage:
+                        return RoundUpbyNumber(GetPercentValue(_operandOne.Value ,_operandTwo.Value), 5);
                     default:
                         return 0;
                 }
@@ -301,6 +325,7 @@ namespace asthanarht.calculator
         Addition,
         Subtraction,
         Division,
-        Multiplication
+        Multiplication,
+        Percentage
     }
 }
