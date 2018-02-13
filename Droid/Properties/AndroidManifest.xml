@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.asthanarht.calculator.asthanarht_calculator">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.asthanarht.calculator">
 	<uses-sdk android:minSdkVersion="15" />
-	<application android:label="asthanarht.calculator">
-	</application>
+	<application android:label="XCalculator" android:icon="@drawable/iconc"></application>
 </manifest>

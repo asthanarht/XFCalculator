@@ -23,4 +23,7 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Models\ss.gif" />
+  </ItemGroup>
 </Project>

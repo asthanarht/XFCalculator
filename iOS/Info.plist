@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>asthanarht.calculator</string>
 	<key>CFBundleName</key>
-	<string>asthanarht.calculator</string>
+	<string>XCalculator</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.asthanarht.calculator</string>
 	<key>CFBundleShortVersionString</key>
