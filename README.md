@@ -17,7 +17,7 @@ This repository hosts the source code for Simple Xamarin Calculator in xamarin f
 
 Flow
 ----------
-![enter image description here](https://lh3.googleusercontent.com/8hSVOQLg3dyrUKxpF6NKcAa-5-Uqt_4vrUEME3CQFjPQrVMpe7YV4SE5IPNBN95WVhRatJHl_4xN "demo")
+![enter image description here](https://github.com/asthanarht/XFCalculator/blob/master/asthanarht.calculator/Models/ss.gif "demo")
 ----------
 ### ScreenShot 
 Ios 
