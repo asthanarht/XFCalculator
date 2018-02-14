@@ -20,7 +20,7 @@ Flow
 ![enter image description here](https://github.com/asthanarht/XFCalculator/blob/master/asthanarht.calculator/Models/ss.gif "demo")
 ----------
 ### ScreenShot 
-Ios 
+### Ios 
  ![enter image description here](https://lh3.googleusercontent.com/LTDWQ5K95Hnih6cKq2TbQrnA91sY8h9BAKPfU5udkLmg_rOztkQzHjBP6f3kv81xS28FKr80lllx "main screen")
 ![enter image description here](https://lh3.googleusercontent.com/bf57Hm2FPvEL1fIdzg3Q5YmkSsldK5Vp2D4oU-Ew_izu9DlqCB6gLV_8KhrHOFBx6GfuLeJ3eLUO "mainscreen")
 
@@ -33,6 +33,9 @@ This design is inspired by in uplabs - https://www.uplabs.com/posts/calculator-p
 ----------
 
 
+### Bugs
+----------
+Please raise issue.
 
 
 <a name="license"/>
